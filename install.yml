@@ -22,6 +22,7 @@ dependencies:
   - numpy-base=1.19.2=py37hfa32c7d_0
   - openssl=1.1.1j=h27cfd23_0
   - pip=21.0.1=py37h06a4308_0
+  - python=3.7.10=hdb3f193_0
   - pytorch=1.4.0=py3.7_cuda9.2.148_cudnn7.6.3_0
   - readline=8.1=h27cfd23_0
   - setuptools=52.0.0=py37h06a4308_0

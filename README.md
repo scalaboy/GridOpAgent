@@ -2,23 +2,22 @@
 This repository is the official implementation of [Winning the L2RPN Challenge: Power Grid Management via Semi-Markov Afterstate Actor-Critic](https://openreview.net/forum?id=LmUJqB1Cz8).
 
 ## Environment setting
-- python >= 3.6  
-- grid2op == 0.9.4 (**Important!**)
-- lightsim2grid == 0.2.3 (**Manual install required.** (https://github.com/BDonnot/lightsim2grid))  
+ubuntu /linux
+下载anaconda
+https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
+
 
 ### Create conda environment
 ```sh
-conda env create -f environment.yml
+conda env create -f install.yml
 conda activate smaac
 ```
 
 ### lightsim2grid installation
 ```sh
-git clone https://github.com/BDonnot/lightsim2grid.git
+
 cd lightsim2grid
-git checkout v0.2.3
-git submodule init
-git submodule update
+make clean
 make
 pip install -U pybind11
 pip install -U .
@@ -40,6 +39,24 @@ The detail of arguments is provided in `test.py`.
 python test.py -n=[experiment_name] -s=[seed] -c=[environment_name (5, sand, wcci)]
 
 # Example
+python test.py -n=5_run -s=0 -c=5
+
+get result
+[  98] Valid: score 97.79145444923583 | step 864.0
+[Test Ch  17( 0)] 864/864 ( 96) Score:   98.7509
+[Test Ch  17( 1)] 864/864 (  8) Score:   98.5088
+[Test Ch  17( 2)] 864/864 (122) Score:   98.3613
+[Test Ch  17( 3)] 864/864 (100) Score:   97.5027
+[Test Ch  17( 4)] 864/864 (  8) Score:   95.8336
+[  99] Valid: score 97.79145444923583 | step 864.0
+[Test Ch  17( 0)] 864/864 ( 96) Score:   98.7509
+[Test Ch  17( 1)] 864/864 (  8) Score:   98.5088
+[Test Ch  17( 2)] 864/864 (122) Score:   98.3613
+[Test Ch  17( 3)] 864/864 (100) Score:   97.5027
+[Test Ch  17( 4)] 864/864 (  8) Score:   95.8336
+[ 100] Valid: score 97.79145444923583 | step 864.0
+
+or
 python test.py -n=wcci_run -s=0 -c=wcci
 ```
 

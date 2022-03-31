@@ -16,7 +16,10 @@ conda activate smaac
 ### lightsim2grid installation
 ```sh
 
+git clone https://github.com/scalaboy/lightsim2grid
 cd lightsim2grid
+git submodule init
+git submodule update
 make clean
 make
 pip install -U pybind11

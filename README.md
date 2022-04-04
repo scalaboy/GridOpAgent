@@ -15,7 +15,8 @@ conda activate smaac
 
 ### lightsim2grid installation
 ```sh
-
+cd GridOpAgent
+rm -rf lightsim2grid/
 git clone https://github.com/scalaboy/lightsim2grid
 cd lightsim2grid
 git submodule init

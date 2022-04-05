@@ -17,14 +17,15 @@ conda activate smaac
 ```sh
 cd GridOpAgent
 rm -rf lightsim2grid/
-git clone https://github.com/scalaboy/lightsim2grid
+git clone https://github.com/BDonnot/lightsim2grid.git
 cd lightsim2grid
+git checkout v0.5.1
 git submodule init
 git submodule update
-make clean
 make
 pip install -U pybind11
 pip install -U .
+
 ```
 
 ## Data download
